@@ -1,4 +1,3 @@
-#Hint: answer is in Alg+ProbSolv ppt
 # write code that takes a string as input and returns the string reversed
 #"Hello" will be returned as "olleH"
 
