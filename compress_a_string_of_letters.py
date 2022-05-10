@@ -8,7 +8,7 @@
 
 string_input_for_compression = input ("Please enter string for compression: ")
 
-number_in_string = len(string_input_for_compression)
+number_in_string = len(string_input_for_compression) - 1
 print (number_in_string)
 
 
@@ -38,3 +38,14 @@ print (f"{number_in_second_concat}{first_letter}")
 
 
 #now I need to create a loop that runs through this code indefintely until there are no more characters in the string.
+while number_in_string != location:
+    current_concatination = ""
+    for index in range (location, len(string_input_for_compression), 1):
+        first_letter = string_input_for_compression [location]
+        if string_input_for_compression [index] == first_letter:
+            current_concatination += string_input_for_compression [index]
+        else:
+            location = index
+            break
+    number_in_current_concat = len (current_concatination)
+    print (f"{number_in_current_concat}{first_letter}")
