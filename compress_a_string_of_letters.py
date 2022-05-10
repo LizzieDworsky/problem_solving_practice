@@ -1,10 +1,6 @@
 #For example an input of "aaabbbbbccccaacccbbbaaabbbaaa"
 #would compress to "3a5b4c2a3c3b3a3b3a"
 
-#if previous index (or next one) is equal to then add to a concatination
-# then use len to add the number
-# not sure yet how to replicate the letter in ir also
-
 def compressing_a_string ():
     string_input_for_compression = input ("Please enter string for compression: ")
     compressed_string = ""
