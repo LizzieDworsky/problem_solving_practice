@@ -38,6 +38,9 @@ print (f"{number_in_second_concat}{first_letter}")
 
 
 #now I need to create a loop that runs through this code indefintely until there are no more characters in the string.
+
+
+
 while number_in_string != location:
     current_concatination = ""
     for index in range (location, len(string_input_for_compression), 1):
@@ -49,3 +52,38 @@ while number_in_string != location:
             break
     number_in_current_concat = len (current_concatination)
     print (f"{number_in_current_concat}{first_letter}")
+
+
+
+
+def compressing_a_string ():
+    string_input_for_compression = input ("Please enter string for compression: ")
+    compressed_string = ""
+    final_index_number = ""
+    location = 0
+    while final_index_number != location:
+        current_concatination = ""
+        number_in_current_concatination = ""
+        for index in range (location, len (string_input_for_compression), 1):
+            current_character = string_input_for_compression [location]
+            if string_input_for_compression [index] == current_character:
+                current_concatination += string_input_for_compression [index]
+            else:
+                location = index
+                break
+        number_in_current_concatination = len (current_concatination)
+        compressed_string += (f"{number_in_current_concatination}{current_character}")
+    current_concatination = ""
+    number_in_current_concatination = ""
+    final_index_number = len(string_input_for_compression[index-1])
+    for index in range (location, len (string_input_for_compression), 1):
+        current_character = string_input_for_compression [location]
+        if string_input_for_compression [index] == current_character:
+            current_concatination += string_input_for_compression [index]
+        else:
+            break
+    number_in_current_concatination = len (current_concatination)
+    compressed_string += (f"{number_in_current_concatination}{current_character}")
+    return compressed_string
+
+print (compressing_a_string ())
