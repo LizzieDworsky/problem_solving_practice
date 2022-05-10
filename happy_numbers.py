@@ -11,13 +11,19 @@ for character in happy_number:
     split_numbers.append (character)
 split_numbers = [int(number) for number in split_numbers]
 print (split_numbers)
+
 first_number = split_numbers.pop(0)
 second_number = split_numbers.pop()
 new_number = (first_number * first_number) + (second_number * second_number)
 print (new_number)
 
-new_number = str(new_number)
-for character in new_number:
-    split_numbers.append (character)
-split_numbers = [int(number) for number in split_numbers]
-print (split_numbers)
+while new_number != 1 or new_number != int(happy_number):
+    new_number = str(new_number)
+    for character in new_number:
+        split_numbers.append (character)
+    split_numbers = [int(number) for number in split_numbers]
+    print (split_numbers)
+    first_number = split_numbers.pop(0)
+    second_number = split_numbers.pop(0)
+    new_number = (first_number * first_number) + (second_number * second_number)
+    print (new_number)
